@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_moon/Widgets/Drop_down_widgets.dart';
@@ -13,21 +14,28 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          height: _deviceHeight,
-          width: _deviceWidth,
-          padding: EdgeInsets.symmetric(
-              horizontal: _deviceWidth * 0.05, vertical: _deviceHeight * 0.02),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              _textWidget(),
-              _DestinationdropDownWidget(),
-              _CustomerLocationDropDownWidget(),
-            ],
-          ),
-        ),
+            height: _deviceHeight,
+            width: _deviceWidth,
+            padding: EdgeInsets.symmetric(
+                horizontal: _deviceWidth * 0.02,
+                vertical: _deviceHeight * 0.02),
+            child: Stack(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    _textWidget(),
+                    _bookaride(),
+                  ],
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: _astroImageWidget(),
+                )
+              ],
+            )),
       ),
     );
   }
@@ -40,6 +48,8 @@ class HomePage extends StatelessWidget {
   Widget _CustomerLocationDropDownWidget() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisSize: MainAxisSize.max,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         CustomDropDownClass(
             values: const ['1', '2', '3', '4'], width: _deviceWidth * 0.45),
@@ -53,9 +63,27 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget _bookaridebtn() {
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(10)),
+      padding: EdgeInsets.only(bottom: _deviceHeight * 0.001),
+      width: _deviceWidth,
+      child: MaterialButton(
+        onPressed: () {},
+        child: const Text(
+          "Book a flight !",
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _textWidget() {
     return Text(
-      "#GOMOON",
+      "#GO MOON",
       style: TextStyle(
           color: Colors.blue.shade600,
           fontSize: 70,
@@ -63,8 +91,26 @@ class HomePage extends StatelessWidget {
     );
   }
 
+  Widget _bookaride() {
+    return Container(
+      height: _deviceHeight * 0.25,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.max,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          _DestinationdropDownWidget(),
+          _CustomerLocationDropDownWidget(),
+          _bookaridebtn()
+        ],
+      ),
+    );
+  }
+
   Widget _astroImageWidget() {
     return Container(
+      height: _deviceHeight * 0.45,
+      width: _deviceWidth * 0.80,
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,
