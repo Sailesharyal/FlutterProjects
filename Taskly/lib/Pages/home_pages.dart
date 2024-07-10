@@ -45,17 +45,6 @@ class _HomePagesState extends State<HomePages> {
             color: Colors.red,
           ),
         ),
-        ListTile(
-          title: const Text(
-            "Exercise for 1 hour",
-            style: TextStyle(decoration: TextDecoration.lineThrough),
-          ),
-          subtitle: Text(DateTime.now().toString()),
-          trailing: const Icon(
-            Icons.check_box_outlined,
-            color: Colors.red,
-          ),
-        ),
       ],
     );
   }
