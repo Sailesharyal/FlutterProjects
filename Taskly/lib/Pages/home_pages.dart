@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -61,4 +62,15 @@ class _HomePagesState extends State<HomePages> {
       ),
     );
   }
+
+//   Widget _WelcomeMessage() {
+//     return const Column(
+//       children: [
+//          Text(
+//           "Welcome TO this App",
+//           style: TextStyle(color: Colors.red, fontSize: 40),
+//         ),
+
+//       ],
+//     );
 }
