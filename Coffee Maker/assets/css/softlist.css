@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .header {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .ice-cream-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .ice-cream-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
+  }
+  
+  .ice-cream-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .ice-cream-name {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .ice-cream-price {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .order-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .order-button:hover {
+    background-color: #45a049;
+  }
+
+  
+.order-summary {
+  background-color: #f4f4f4;
+  padding: 2rem;
+  width: 30%;
+  margin-left: 1%;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.order-summary h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .ice-cream-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .order-summary {
+    width: 100%;
+    margin-left: 0;
+  }
+}

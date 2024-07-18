@@ -11,10 +11,13 @@ class HomePages extends StatefulWidget {
 
 class _HomePagesState extends State<HomePages> {
   late double _devicewidth, _deviceHeight;
+  String? _NewTaskContent;
+
   @override
   Widget build(BuildContext context) {
     _devicewidth = MediaQuery.of(context).size.width;
     _deviceHeight = MediaQuery.of(context).size.height;
+    print("Input value : $_NewTaskContent");
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
@@ -55,7 +58,7 @@ class _HomePagesState extends State<HomePages> {
       // focusColor: Colors.red,
       backgroundColor: Colors.red,
       shape: const CircleBorder(),
-      onPressed: () {},
+      onPressed: _displayTaskPopup,
       child: const Icon(
         Icons.add,
         color: Colors.white,
@@ -63,14 +66,24 @@ class _HomePagesState extends State<HomePages> {
     );
   }
 
-//   Widget _WelcomeMessage() {
-//     return const Column(
-//       children: [
-//          Text(
-//           "Welcome TO this App",
-//           style: TextStyle(color: Colors.red, fontSize: 40),
-//         ),
-
-//       ],
-//     );
+  void _displayTaskPopup() {
+    showDialog(
+      context: context,
+      builder: (BuildContext _context) {
+        return AlertDialog(
+          title: const Text("Add new Task"),
+          content: TextField(
+            onSubmitted: (_value) {},
+            onChanged: (_value) {
+              setState(
+                () {
+                  _NewTaskContent = _value;
+                },
+              );
+            },
+          ),
+        );
+      },
+    );
+  }
 }

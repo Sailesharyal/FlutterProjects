@@ -109,8 +109,8 @@ class HomePage extends StatelessWidget {
 
   Widget _astroImageWidget() {
     return Container(
-      height: _deviceHeight * 0.45,
-      width: _deviceWidth * 0.80,
+      height: _deviceHeight * 0.50,
+      width: _deviceWidth * 0.65,
       decoration: const BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.fill,

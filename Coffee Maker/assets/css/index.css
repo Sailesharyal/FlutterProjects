@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80vw;
+    max-width: 1000px;
+    animation: fadeIn 0.5s; /* added animation */
+}
+
+.logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%; /* added rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* added shadow */
+}
+
+h1, h3 {
+    color: #333;
+    font-weight: bold; /* added bold font weight */
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s; /* added transition */
+}
+
+.card:hover {
+    transform: scale(1.05); /* added hover effect */
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 350px;
+    object-fit: cover; /* added object-fit to maintain aspect ratio */
+    cursor: pointer; /* added cursor pointer to indicate clickability */
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold; /* added bold font weight */
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 20px 40px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    width: 45%;
+    margin: 5px;
+    transition: background-color 0.3s; /* added transition */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.mb-4 {
+    font-family: cursive;
+    font-size: 50px;
+    color: black;
+}
+
+/* added animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+   .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
