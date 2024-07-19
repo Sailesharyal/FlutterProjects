@@ -18,3 +18,13 @@ class Car {
     print("This is a $name car and this car have $NumOfTyre");
   }
 }
+
+class Bike {
+  String? name;
+  String? BikeType;
+  int? NumOfTyre;
+
+  void OnStart() {
+    print("This is a $name car and this car have $NumOfTyre");
+  }
+}
