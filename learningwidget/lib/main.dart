@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learningwidget/Pages/ListandGridView.dart';
+import 'package:learningwidget/Pages/List_Grid_View.dart';
+import 'package:learningwidget/Pages/container_sized.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'LearningWidgets',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Listandgridview(),
+      home: const container_sized(),
     );
   }
 }

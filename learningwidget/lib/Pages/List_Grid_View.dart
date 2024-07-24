@@ -11,10 +11,14 @@ class _ListandgridviewState extends State<Listandgridview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      title: const Text(" List and Grid View"),
-      backgroundColor: Colors.red,
-      elevation: 10,
-    ));
+      appBar: AppBar(
+        title: const Text(" List and Grid View"),
+        backgroundColor: Colors.red,
+        elevation: 10,
+      ),
+      body: Container(
+        width: BorderSide.strokeAlignCenter,
+      ),
+    );
   }
 }
