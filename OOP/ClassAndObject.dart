@@ -25,6 +25,6 @@ class Bike {
   int? NumOfTyre;
 
   void OnStart() {
-    print("This is a $name car and this car have $NumOfTyre");
+    print("This is a $name bike and this car have $NumOfTyre");
   }
 }
