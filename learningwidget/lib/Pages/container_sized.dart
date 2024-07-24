@@ -27,9 +27,15 @@ class container_sized extends StatelessWidget {
           width: 200,
           height: 300,
           decoration: const BoxDecoration(
-            shape: BoxShape.circle,
-            color: Colors.blue,
-          ),
+              shape: BoxShape.circle,
+              color: Colors.blue,
+              boxShadow: [
+                BoxShadow(
+                    blurRadius: 300,
+                    color: Colors.black,
+                    spreadRadius: 20,
+                    blurStyle: BlurStyle.normal)
+              ]),
           child: Container(color: Colors.red, width: 100, height: 400), //Text(
           //   "This is a container",
           //   style: TextStyle(color: Colors.white),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learningwidget/Pages/List_Grid_View.dart';
+import 'package:learningwidget/Pages/Rows_Column.dart';
 import 'package:learningwidget/Pages/container_sized.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const container_sized(),
+      home: const rows_columns(),
     );
   }
 }
