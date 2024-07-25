@@ -3,7 +3,6 @@ import 'package:learningwidget/Pages/List_Grid_View.dart';
 import 'package:learningwidget/Pages/Rows_Column.dart';
 import 'package:learningwidget/Pages/Text_Elevated_btn.dart';
 import 'package:learningwidget/Pages/container_sized.dart';
-import 'package:learningwidget/Pages/texfield.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const textfield(),
+      home: const Listandgridview(),
     );
   }
 }
