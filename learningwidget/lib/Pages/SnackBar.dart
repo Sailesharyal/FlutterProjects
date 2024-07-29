@@ -55,8 +55,20 @@ class snackbarWidget extends StatelessWidget {
           child: Text("Click Here"),
           onPressed: () {
             final snackBar = SnackBar(
-              content: Text("This is a snack bar"),
-              duration: Duration(milliseconds: 20),
+              content:
+                  Text("This is a snack bar"), //To show the content or Context
+              duration: Duration(minutes: 1), // fOR THE pOP UP Time
+              behavior: SnackBarBehavior.floating, //fOR FLOTING SNACKBAR
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+
+                //To make the Radius
+              ),
+              action: SnackBarAction(
+                label: "Undo",
+                textColor: Colors.blueGrey,
+                onPressed: () {}, //To add actions/ buttom inside a SnackBAr
+              ),
             );
             ScaffoldMessenger.of(context).showSnackBar(snackBar);
           },
