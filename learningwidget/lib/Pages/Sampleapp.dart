@@ -73,7 +73,7 @@ class listview extends StatelessWidget {
             ),
           ),
           Container(
-            width: 200,
+            width: 300,
             alignment: Alignment.centerLeft,
             child: Column(
               children: [
@@ -87,6 +87,7 @@ class listview extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           borderSide: const BorderSide(
                               color: Colors.blueGrey, width: 2)),
+                      hintText: " Username",
                       prefix: const Icon(Icons.person)),
                 ),
                 const SizedBox(
@@ -103,10 +104,23 @@ class listview extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           borderSide:
                               const BorderSide(color: Colors.orange, width: 2),
-                        ))),
+                        ),
+                        prefix: Icon(Icons.remove_red_eye),
+                        hintText: "  Password")),
               ],
             ),
           ),
+          const ElevatedButton(
+              style: ButtonStyle(
+                  alignment: Alignment.center,
+                  backgroundColor: WidgetStateColor.transparent),
+              onPressed: () {},
+              child: Text(
+                "Login in",
+                style: TextStyle(
+                  color: Colors.blueAccent,
+                ),
+              ))
         ],
       ),
     );
