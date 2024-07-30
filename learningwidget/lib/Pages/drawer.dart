@@ -60,10 +60,15 @@ class _drawerWidgetState extends State<drawerWidget> {
         ),
       ),
       appBar: AppBar(
-        title: Text("Drawer"),
+        title: const Text("Drawer"),
         backgroundColor: Colors.red,
       ),
-      body: Container(),
+      body: Center(
+        child: Container(
+          width: 200,
+          child: const Text("Hey! How Are you "),
+        ),
+      ),
     );
   }
 }
