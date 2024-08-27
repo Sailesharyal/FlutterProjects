@@ -314,3 +314,302 @@
 //         ));
 //   }
 // }
+
+
+// import 'package:sajilo_yatra/commons/bottom_sheet_for_payment.dart';
+
+// import '../../../app/app_exports.dart';
+
+// class BaggageButtonsheet extends StatefulWidget {
+//   const BaggageButtonsheet({super.key});
+
+//   @override
+//   State<BaggageButtonsheet> createState() => _BaggageButtonsheetState();
+// }
+
+// class _BaggageButtonsheetState extends State<BaggageButtonsheet> {
+//   @override
+//   Widget build(BuildContext context) {
+//     Size size = MediaQuery.of(context).size;
+//     return Column(
+//       mainAxisSize: MainAxisSize.min,
+//       children: [
+//         Padding(
+//             padding: const EdgeInsets.all(20),
+//             child: Row(
+//               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//               children: [
+//                 Text(
+//                   "Baggage",
+//                   style: getMediumStyleInter(
+//                       fontSize: FontSize.s16,
+//                       color: ColorManager.subTitleColor),
+//                 ),
+//                 Icon(
+//                   Icons.clear_rounded,
+//                 )
+//               ],
+//             )),
+//         Divider(
+//           color: ColorManager.borderColor,
+//         ),
+//         sboxH10,
+//         Row(
+//           mainAxisAlignment: MainAxisAlignment.center,
+//           children: [
+//             Text(
+//               "Save Up to 40% buying additional, baggage online",
+//               style: getMediumStyleInter(
+//                   fontSize: FontSize.s10, color: ColorManager.subTextColor),
+//             ),
+//           ],
+//         ),
+//         sboxH10,
+//         Divider(color: ColorManager.borderColor),
+//         ListTile(
+//           leading: SvgPicture.asset("assets/svg/person_icon.svg"),
+//           title: Text(
+//             "Adult First",
+//             style: getMediumStyleInter(
+//                 fontSize: FontSize.s15,
+//                 color: ColorManager.subMenuHighlightText),
+//           ),
+//           subtitle: Text(
+//             "7kg allowed + 20kg",
+//             style: getMediumStyleInter(
+//                 fontSize: FontSize.s12, color: ColorManager.subTextColor),
+//           ),
+//           trailing: Icon(Icons.keyboard_arrow_up),
+//         ),
+//         Padding(
+//           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+//           child: Column(
+//             children: [
+//               Container(
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(5),
+//                   border: Border.all(color: ColorManager.borderColor),
+//                 ),
+//                 child: Padding(
+//                   padding: const EdgeInsets.all(10.0),
+//                   child: Column(
+//                     children: [
+//                       Row(
+//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                         children: [
+//                           Row(
+//                             children: [
+//                               Icon(
+//                                 Icons.luggage_outlined,
+//                                 color: ColorManager.grey5,
+//                               ),
+//                               Text(
+//                                 "20kg @NPR500",
+//                                 style: getMediumStyleInter(
+//                                     fontSize: FontSize.s13,
+//                                     color: ColorManager.subMenuHighlightText),
+//                               ),
+//                             ],
+//                           ),
+//                           Icon(
+//                             Icons.radio_button_checked_rounded,
+//                             color: Colors.orange,
+//                           )
+//                         ],
+//                       ),
+//                       sboxH10,
+//                       Row(
+//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                         children: [
+//                           Row(
+//                             children: [
+//                               Icon(
+//                                 Icons.luggage_outlined,
+//                                 color: ColorManager.grey5,
+//                               ),
+//                               Text(
+//                                 "30kg @NPR1000",
+//                                 style: getMediumStyleInter(
+//                                     fontSize: FontSize.s13,
+//                                     color: ColorManager.subMenuHighlightText),
+//                               ),
+//                             ],
+//                           ),
+//                           Icon(
+//                             Icons.radio_button_checked_rounded,
+//                           )
+//                           //color: Colors.orange,)
+//                         ],
+//                       ),
+//                       sboxH10,
+//                       Row(
+//                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                         children: [
+//                           Row(
+//                             children: [
+//                               Icon(
+//                                 Icons.luggage_outlined,
+//                                 color: ColorManager.grey5,
+//                               ),
+//                               Text(
+//                                 "40kg @NPR2000",
+//                                 style: getMediumStyleInter(
+//                                     fontSize: FontSize.s13,
+//                                     color: ColorManager.subMenuHighlightText),
+//                               ),
+//                             ],
+//                           ),
+//                           Icon(
+//                             Icons.radio_button_checked_rounded,
+//                           )
+//                           //color: Colors.orange,)
+//                         ],
+//                       ),
+//                       SizedBox(
+//                         height: 10,
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+//               ),
+//             ],
+//           ),
+//         ),
+//         Divider(
+//           color: ColorManager.borderColor,
+//         ),
+//         ListTile(
+//           leading: SvgPicture.asset("assets/svg/baby_icon.svg"),
+//           title: Text("Infant 1",
+//               style: getMediumStyleInter(
+//                 fontSize: FontSize.s15,
+//                 color: ColorManager.subMenuHighlightText,
+//               )),
+//           subtitle: Text(
+//             "5 kg allowed",
+//             style: getMediumStyleInter(
+//               fontSize: FontSize.s12,
+//               color: ColorManager.subTextColor,
+//             ),
+//           ),
+//         ),
+//         Column(
+//           children: [
+//             Padding(
+//               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+//               child: Container(
+//                 decoration: BoxDecoration(
+//                     borderRadius: BorderRadius.circular(5),
+//                     border: Border.all(color: ColorManager.borderColor)),
+//                 child: Column(
+//                   children: [
+//                     Padding(
+//                       padding: const EdgeInsets.symmetric(
+//                           horizontal: 20, vertical: 5),
+//                       child: Row(
+//                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//                         children: [
+//                           Icon(
+//                             Icons.info_outline,
+//                             color: Colors.deepOrange,
+//                           ),
+//                           Text("You can't buy extra luggage for infant",
+//                               style: getMediumStyleInter(
+//                                 fontSize: FontSize.s10,
+//                                 color: Colors.deepOrange,
+//                               )),
+//                         ],
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//               ),
+//             ),
+//           ],
+//         ),
+//         Divider(
+//           color: ColorManager.borderColor,
+//         ),
+//         ListTile(
+//           leading: SvgPicture.asset("assets/svg/kid_face_icon.svg"),
+//           title: Text("Child First",
+//               style: getMediumStyleInter(
+//                 fontSize: FontSize.s15,
+//                 color: ColorManager.subMenuHighlightText,
+//               )),
+//           subtitle: Text("7 Kg allowed",
+//               style: getMediumStyleInter(
+//                 fontSize: FontSize.s12,
+//                 color: ColorManager.subTextColor,
+//               )),
+//           trailing: Icon(Icons.keyboard_arrow_down),
+//         ),
+//         ListTile(
+//           leading: SvgPicture.asset("assets/svg/kid_face_icon.svg"),
+//           title: Text("Child First",
+//               style: getMediumStyleInter(
+//                 fontSize: FontSize.s15,
+//                 color: ColorManager.subMenuHighlightText,
+//               )),
+//           subtitle: Text("7 Kg allowed",
+//               style: getMediumStyleInter(
+//                 fontSize: FontSize.s12,
+//                 color: ColorManager.subTextColor,
+//               )),
+//           trailing: Icon(Icons.keyboard_arrow_down),
+//         ),
+//         Divider(
+//           color: ColorManager.borderColor,
+//         ),
+//         Padding(
+//           padding: const EdgeInsets.symmetric(horizontal: 20),
+//           child: Row(
+//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//             children: [
+//               Expanded(
+//                 child: ElevatedButton(
+//                   style: ElevatedButton.styleFrom(
+//                       backgroundColor: ColorManager.white,
+//                       padding: const EdgeInsets.symmetric(vertical: 15),
+//                       shape: RoundedRectangleBorder(
+//                           borderRadius: BorderRadius.circular(40.0),
+//                           side: BorderSide(color: ColorManager.dividerColor)),
+//                       shadowColor: Colors.transparent),
+//                   onPressed: () {},
+//                   child: Text(
+//                     "Skip",
+//                     style: getMediumStyleInter(
+//                       fontSize: FontSize.s13,
+//                       color: ColorManager.btnTextColor,
+//                     ),
+//                   ),
+//                 ),
+//               ),
+//               SizedBox(width: MediaQuery.of(context).size.width * 0.05),
+//               Expanded(
+//                 child: CustomButton(
+//                     buttonText: "Save", onTap: () {}, width: 170),
+//               )
+//             ],
+//           ),
+//         ),
+//       ],
+//     );
+//   }
+// }
+
+// class BottomSheetForBaggageSelection {
+//   showBottomSheetForBaggage(BuildContext context) {
+//     showModalBottomSheet(
+//       context: context,
+//       shape: const RoundedRectangleBorder(
+//         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+//       ),
+//       isScrollControlled: true,
+//       builder: (BuildContext context) {
+//         return const BaggageButtonsheet();
+//       },
+//     );
+//   }
+// }
+

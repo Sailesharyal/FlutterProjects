@@ -12,10 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "CoinCap",
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Color.fromARGB(88, 60, 197, 100),
+        scaffoldBackgroundColor: const Color.fromRGBO(88, 60, 197, 1.0),
       ),
       home: const HomePage(),
     );
