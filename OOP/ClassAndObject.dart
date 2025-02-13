@@ -1,30 +1,52 @@
+// class Student {
+//   //Making  a class
+//   String? name;
+//   int? age; //Creating a class    #Declaring a properties  of a class
+
+//   void display() {
+//     print(
+//         "My name is $name and  my age is $age"); // Declaring a methods of a class
+//   }
+// }
+
+// class Car {
+//   String? name;
+//   String? VehicleType;
+//   int? NumOfTyre;
+
+//   void OnStart() {
+//     print("This is a $name car and this car have $NumOfTyre");
+//   }
+// }
+
+// class Bike {
+//   String? name;
+//   String? BikeType;
+//   int? NumOfTyre;
+
+//   void OnStart() {
+//     print("This is a $name bike and this car have $NumOfTyre");
+//   }
+// }
+
+// class AnimalClass {
+//   String? name;
+//   int? Legs;
+//   int? tailes;
+
+//   void display() {
+//     print("my pet name is " +)
+//   }
+// }
+
 class Student {
-  //Making  a class
   String? name;
-  int? age; //Creating a class    #Declaring a properties  of a class
+  int? age;
+  int? grade;
 
-  void display() {
-    print(
-        "My name is $name and  my age is $age"); // Declaring a methods of a class
-  }
-}
-
-class Car {
-  String? name;
-  String? VehicleType;
-  int? NumOfTyre;
-
-  void OnStart() {
-    print("This is a $name car and this car have $NumOfTyre");
-  }
-}
-
-class Bike {
-  String? name;
-  String? BikeType;
-  int? NumOfTyre;
-
-  void OnStart() {
-    print("This is a $name bike and this car have $NumOfTyre");
+  void displayInfo() {
+    print("Student name: $name.");
+    print("Student age: $age.");
+    print("Student grade: $grade.");
   }
 }
